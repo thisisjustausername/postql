@@ -6,12 +6,16 @@ Furthermore it cleanly implements SQL-operations select, insert, update and dele
 It allows for injection-safe SQL-queries and returns the results in a clean and easy-to-use Result object with dictionary or list of dictionaries as data from the query.
 
 ## Installation
-
+Install `dist/postql-0.1.0.tar.gz` using curl or wget, then install it using pip.
 ```bash
-pip install postql
+# Download .tar file
+curl https://raw.githubusercontent.com/thisisjustausername/postql/refs/heads/main/dist/postql-0.1.0.tar.gz --output postql-0.1.0.tar.gz
+
+# Install .tar file
+pip install postql-0.1.0.tar.gz
 ```
 
-Requires Python 3.11+ though we recommend Python 3.12+.
+Requires at least Python 3.11+ though we recommend at least Python 3.12+ in general.
 ## Usage
 
 ```python
