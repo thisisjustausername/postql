@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "postql"
+version = "0.1.0"
+description = "A PostgreSQL client for Python allowing for easy SQL-access with and without pooling."
+authors = [{name = "Leon Gattermeyer"}]
+keywords = ["postgresql", "sql", "database", "client", "pooling", "psycopg", "connection-pool"]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "psycopg>=3.0",
+    "psycopg_pool>=3.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/thisisjustausername/postql"
