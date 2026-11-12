@@ -45,7 +45,7 @@ if result.success:
 else:
     print(result.error)
 
-db.close_pool()
+db.shutdown()
 ```
 
 ## API

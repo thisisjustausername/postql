@@ -24,12 +24,6 @@ class DB:
         self.credentials = credentials
         self.pool = create_pool(credentials=credentials)
 
-    def close_pool(self):
-        """
-        closes the connection pool
-        """
-        close_pool(self.pool)
-
     def connect(self) -> Cursor:
         """
         connect
@@ -434,6 +428,13 @@ class DB:
         conn = getattr(cursor, "connection", None)
         if conn is not None:
             conn.close()
+
+
+    def shutdown(self):
+        """
+        closes the connection pool
+        """
+        close_pool(self.pool)
 
 
 def close(cursor: Cursor):
